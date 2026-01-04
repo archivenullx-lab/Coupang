@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>My App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>쿠팡 링크모음</title>
+
+    <style>
+        :root {
+            --bg: #f5f7fa;
+            --card: #ffffff;
+            --primary: #3b82f6;
+            --text-main: #111827;
+            --text-sub: #6b7280;
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;      /* 세로 가운데 */
+            justify-content: center;  /* 가로 가운데 */
+            padding: 24px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 28px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 18px; /* 링크 간 간격 */
+        }
+
+        .link-btn {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+            transition: transform 0.12s ease, box-shadow 0.12s ease;
+        }
+
+        .link-btn:active {
+            transform: scale(0.97);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) inset;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>안녕하세요, 내 앱입니다!</h1>
-    <a href="https://example.com">여기를 누르면 링크 이동</a>
+    <div class="container">
+        <h1>쿠팡 링크모음</h1>
+
+        <div class="links">
+            <a class="link-btn" href="https://example.com" target="_blank">쿠팡 메인</a>
+            <a class="link-btn" href="https://example.com" target="_blank">오늘의 특가</a>
+            <a class="link-btn" href="https://example.com" target="_blank">로켓배송</a>
+            <a class="link-btn" href="https://example.com" target="_blank">베스트 상품</a>
+            <a class="link-btn" href="https://example.com" target="_blank">내 주문내역</a>
+        </div>
+    </div>
 </body>
 </html>
+
